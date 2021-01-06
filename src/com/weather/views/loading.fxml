@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import de.jensd.fx.glyphs.weathericons.WeatherIcon?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: linear-gradient(to bottom,#00778f,#3cc8bf);"
+            xmlns="http://javafx.com/javafx/10.0.2">
+   <WeatherIcon fill="WHITE" layoutX="201.0" layoutY="204.0" size="200px"/>
+   <Text fill="WHITE" layoutX="161.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Weather">
+      <font>
+         <Font name="System Bold Italic" size="52.0"/>
+      </font>
+   </Text>
+   <JFXSpinner layoutX="284.0" layoutY="288.0"/>
+</AnchorPane>

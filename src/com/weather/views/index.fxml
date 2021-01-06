@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import de.jensd.fx.glyphs.weathericons.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom,#00778f,#3cc8bf);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.weather.controllers.Index">
+   <Pane fx:id="pane">
+      <Rectangle arcHeight="20.0" arcWidth="20.0" height="325.0" layoutX="50.0" layoutY="35.0" stroke="#ffffff01" strokeType="INSIDE" width="503.0">
+         <fill>
+            <RadialGradient centerX="0.10666667620340982" focusAngle="-23.96" focusDistance="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.6063321232795715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.1160305343511449">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.6063321232795715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4099999964237213" green="0.3935999870300293" blue="0.3935999870300293" opacity="0.2972664535045624" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <JFXButton layoutX="574.0" layoutY="1.0" onAction="#exit" text="X" textFill="#ff8181" />
+      <JFXButton layoutX="550.0" layoutY="1.0" onAction="#minimize" text="_" textFill="WHITE" />
+      <Text fx:id="name" fill="WHITE" layoutX="75.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VILLE">
+         <font>
+            <Font name="Tahoma Bold" size="42.0" />
+         </font>
+      </Text>
+      <WeatherIcon fill="WHITE" iconName="UP" layoutX="428.0" layoutY="106.0" size="25px" />
+      <WeatherIcon fill="WHITE" iconName="DOWN" layoutX="478.0" layoutY="106.0" size="25px" />
+      <Text fx:id="temp_max" fill="WHITE" layoutX="443.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="99°C">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="temp_min" fill="WHITE" layoutX="495.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="99°C">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="temp" fill="WHITE" layoutX="422.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 2°C">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="hours" fill="WHITE" layoutX="71.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00:00">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Text>
+      <Text fx:id="jour" fill="WHITE" layoutX="75.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jour">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="date" fill="WHITE" layoutX="74.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DD/MM/YYYY">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="74.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vent : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="wind_speed" fill="WHITE" layoutX="117.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 m/s">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="74.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pression : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="pressure" fill="WHITE" layoutX="141.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 m/s">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <WeatherIcon fx:id="icon" fill="WHITE" layoutX="250.0" layoutY="204.0" size="100px" />
+      <Text fx:id="desc" fill="WHITE" layoutX="71.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="363.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Weather">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="town_picker" focusColor="WHITE" layoutX="365.0" layoutY="239.0" onAction="#change" prefHeight="26.0" prefWidth="171.0" style="fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+      <FontAwesomeIcon fill="WHITE" iconName="TINT" layoutX="430.0" layoutY="205.0" size="22px" />
+      <Text fx:id="humidity" fill="WHITE" layoutX="449.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0%">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+   </Pane>
+   <JFXSpinner fx:id="spinner" visible="false" layoutX="196.0" layoutY="105.0" prefHeight="145.0" prefWidth="206.0" />
+</AnchorPane>
